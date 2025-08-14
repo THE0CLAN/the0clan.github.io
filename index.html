@@ -7,30 +7,44 @@
 <style>
   body {
     margin: 0;
-    height: 100vh;
-    background-image: url('FinalGrande.png'); /* Replace with your image file */
-    background-size: contain; /* Show the whole image */
-    background-repeat: no-repeat;
-    background-position: center;
-    background-color: black; /* Fill borders if aspect ratio differs */
+    background-color: black;
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Align toward top */
+    align-items: center;
+    height: 100vh;
   }
-  a {
-    margin-top: 16.6vh; /* About 1/6 down from the top */
-    font-size: 8vw; /* Huge text, scales with screen width */
+  .container {
+    position: relative;
+    display: inline-block;
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .container img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  .text-link {
+    position: absolute;
+    top: 25%; /* halfway between top and center */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: sans-serif;
     font-weight: bold;
+    font-size: 50%; /* 50% of image's width */
     color: white;
     text-decoration: none;
     text-shadow: 2px 2px 4px black;
   }
-  a:hover {
+  .text-link:hover {
     color: yellow;
   }
 </style>
 </head>
 <body>
-  <a href="mainmenu.html">REGISTROS</a>
+  <div class="container">
+    <img src="your-image.jpg" alt="Background">
+    <a href="mainmenu.html" class="text-link">REGISTROS</a>
+  </div>
 </body>
 </html>
