@@ -3,48 +3,74 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>T0C - REGISTRO</title>
+<title>THE0CLAN</title>
 <style>
-  body {
+  html, body {
     margin: 0;
-    background-color: black;
+    padding: 0;
+    height: 100%;
+    font-family: sans-serif;
+    background: #000;
+    color: #fff;
+  }
+
+  .top-half {
+    height: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
   }
-  .container {
-    position: relative;
-    display: inline-block;
-    max-width: 100%;
+
+  .top-half img {
     max-height: 100%;
-  }
-  .container img {
-    display: block;
     max-width: 100%;
-    height: auto;
   }
-  .text-link {
-    position: absolute;
-    top: 25%; /* halfway between top and center */
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-family: sans-serif;
+
+  .bottom-half {
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bottom-half .links {
+    text-align: center;
+    font-size: 8vw; /* roughly 2/3 screen width visually */
     font-weight: bold;
-    font-size: 50%; /* 50% of image's width */
-    color: white;
-    text-decoration: none;
-    text-shadow: 2px 2px 4px black;
   }
-  .text-link:hover {
-    color: yellow;
+
+  .bottom-half .links a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    margin: 0.2em 0;
+  }
+
+  .bottom-half .links a:hover {
+    color: #f0c000;
+  }
+
+  @media (max-width: 800px) {
+    .bottom-half .links {
+      font-size: 10vw; /* larger on mobile for readability */
+    }
   }
 </style>
 </head>
 <body>
-  <div class="container">
-    <img src="FinalGrande.png" alt="Background">
-    <a href="mainmenu.html" class="text-link">REGISTRO</a>
+
+  <div class="top-half">
+    <img src="FinalGrande.png" alt="Banner">
   </div>
+
+  <div class="bottom-half">
+    <div class="links">
+      <a href="liga.html">LIGAS</a>
+      <a href="raids.html">RAIDS</a>
+      <a href="jogos.html">JOGOS</a>
+      <a href="guerras.html">GUERRAS</a>
+    </div>
+  </div>
+
 </body>
 </html>
