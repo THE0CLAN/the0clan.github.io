@@ -35,9 +35,9 @@
   }
 
   .bottom-half .links-container {
-    width: 66%; /* ~2/3 of screen width */
+    width: 50%; /* Now fits half the page width */
     text-align: center;
-    font-size: 5vw;
+    font-size: 4vw; /* Scaled to fit */
     font-weight: bold;
     white-space: nowrap;
     position: absolute;
@@ -48,7 +48,7 @@
   .bottom-half .links-container a {
     color: #fff;
     text-decoration: none;
-    margin: 0 0.5em;
+    margin: 0 0.25em;
   }
 
   .bottom-half .links-container a:hover {
@@ -56,14 +56,14 @@
   }
 
   .bottom-half .separator {
-    margin: 0 0.5em;
+    margin: 0 0.25em;
     color: #fff;
   }
 
   @media (max-width: 800px) {
     .bottom-half .links-container {
-      font-size: 7vw;
-      width: 90%;
+      font-size: 5vw;
+      width: 70%;
     }
   }
 </style>
