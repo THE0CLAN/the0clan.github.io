@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Página Inicial</title>
+<title>THE0CLAN</title>
 <style>
   html, body {
     margin: 0;
@@ -35,14 +35,15 @@
   }
 
   .bottom-half .links-container {
-    width: 50%; /* Now fits half the page width */
+    width: 33%; /* 2/3 of previous 50% width */
     text-align: center;
-    font-size: 4vw; /* Scaled to fit */
+    font-size: 2.7vw; /* scaled down proportionally */
     font-weight: bold;
     white-space: nowrap;
     position: absolute;
     top: 25%; /* halfway in bottom-half = 75% of full screen */
-    transform: translateY(-50%);
+    left: 50%;
+    transform: translate(-50%, -50%); /* center horizontally */
   }
 
   .bottom-half .links-container a {
@@ -62,8 +63,8 @@
 
   @media (max-width: 800px) {
     .bottom-half .links-container {
-      font-size: 5vw;
-      width: 70%;
+      font-size: 4vw;
+      width: 50%;
     }
   }
 </style>
