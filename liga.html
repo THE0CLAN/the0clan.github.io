@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>LIGA</title>
+<style>
+  body {
+    background-color: #000;
+    color: #fff;
+    font-family: sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 2em;
+  }
+  .year {
+    font-size: 2em;
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+  }
+  .months {
+    font-size: 1.2em;
+    margin-bottom: 2em;
+  }
+  .months a {
+    color: #f0c000;
+    text-decoration: underline;
+    margin: 0 0.5em;
+  }
+</style>
+</head>
+<body>
+
+<div id="yearsContainer"></div>
+
+<script>
+const years = [2025, 2024, 2023, 2022, 2021, 2020];
+const monthNames = ["JAN", "FEV", "MAR", "ABR", "MAI", "JUN", "JUL", "AGO", "SET", "OUT", "NOV", "DEZ"];
+const yearsContainer = document.getElementById("yearsContainer");
+
+years.forEach(year => {
+  const yearDiv = document.createElement("div");
+  yearDiv.className = "year";
+  yearDiv.textContent = year;
+  yearsContainer.appendChild(yearDiv);
+
+  const monthsDiv = document.createElement("div");
+  monthsDiv.className = "months";
+
+  monthNames.forEach((month, index) => {
+    const monthLink = document.createElement("a");
+    monthLink.textContent = month;
+
+    // Build file name: YYMM.html
+    const yy = String(year).slice(2);
+    const mm = String(index + 1).padStart(2, "0");
+    monthLink.href = `${yy}${mm}.html`;
+
+    monthsDiv.appendChild(monthLink);
+  });
+
+  yearsContainer.appendChild(monthsDiv);
+});
+</script>
+
+</body>
+</html>
