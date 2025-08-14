@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>THE0CLAN</title>
+<title>Página Inicial</title>
 <style>
   html, body {
     margin: 0;
@@ -30,29 +30,40 @@
     height: 50%;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    position: relative;
   }
 
-  .bottom-half .links {
+  .bottom-half .links-container {
+    width: 66%; /* ~2/3 of screen width */
     text-align: center;
-    font-size: 8vw; /* roughly 2/3 screen width visually */
+    font-size: 5vw;
     font-weight: bold;
+    white-space: nowrap;
+    position: absolute;
+    top: 25%; /* halfway in bottom-half = 75% of full screen */
+    transform: translateY(-50%);
   }
 
-  .bottom-half .links a {
-    display: block;
+  .bottom-half .links-container a {
     color: #fff;
     text-decoration: none;
-    margin: 0.2em 0;
+    margin: 0 0.5em;
   }
 
-  .bottom-half .links a:hover {
+  .bottom-half .links-container a:hover {
     color: #f0c000;
   }
 
+  .bottom-half .separator {
+    margin: 0 0.5em;
+    color: #fff;
+  }
+
   @media (max-width: 800px) {
-    .bottom-half .links {
-      font-size: 10vw; /* larger on mobile for readability */
+    .bottom-half .links-container {
+      font-size: 7vw;
+      width: 90%;
     }
   }
 </style>
@@ -64,10 +75,10 @@
   </div>
 
   <div class="bottom-half">
-    <div class="links">
-      <a href="liga.html">LIGAS</a>
-      <a href="raids.html">RAIDS</a>
-      <a href="jogos.html">JOGOS</a>
+    <div class="links-container">
+      <a href="liga.html">LIGAS</a><span class="separator">-</span>
+      <a href="raids.html">RAIDS</a><span class="separator">-</span>
+      <a href="jogos.html">JOGOS</a><span class="separator">-</span>
       <a href="guerras.html">GUERRAS</a>
     </div>
   </div>
